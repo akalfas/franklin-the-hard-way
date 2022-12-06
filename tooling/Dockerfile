@@ -1,10 +1,6 @@
-FROM node:18.12-buster
+FROM node:18.12-buster-slim
 
-RUN apt clean
-
-RUN apt-get update && apt-get -y install git
-
-RUN npm install -g @adobe/helix-cli
+RUN npm install -g @adobe/helix-cli@v14.17.3
 
 WORKDIR /code
 
